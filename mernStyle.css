@@ -1,0 +1,455 @@
+
+html {
+    margin: 0;
+    font-size: 16px;
+    background-color: rgb(57, 249, 245);
+}
+
+body {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    background: linear-gradient(rgb(6, 8, 72), rgb(57, 249, 245));
+    height: 100vh;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+header {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+nav {
+    grid-column: 2 / 4;
+    grid-row: 1;
+}
+
+nav li {
+    display: inline;
+    list-style: none;
+}
+
+nav a,
+footer p {
+    font-family: "Nunito Sans", sans-serif;
+    text-decoration: none;
+    color: white;
+    letter-spacing: 0.13rem;
+}
+
+nav a:hover {
+    background-color: rgb(27, 57, 121);
+}
+
+span.link-letter {
+    font-family: "Orbitron", sans-serif;
+    text-decoration: none;
+    color: #39f9f5;
+    padding-right: 0.5rem;
+}
+
+p.logo {
+    margin: 1rem 0 0 2.5rem;
+    font-size: 2.5rem;
+    color: #39f9f5;
+}
+
+li.links {
+    float: right;
+    margin: 1rem 2rem;
+}
+
+section {
+    grid-column: 1 / 2;
+    grid-row: 3;
+    left: 15rem;
+}
+
+main {
+    grid-column: 2 / 4;
+    grid-row: 3 / auto;
+    text-align: left;
+    margin: 5rem 0 0 0;
+}
+
+.section-info{
+    grid-column: 1/ 4;
+    grid-row: 5 /auto;
+    margin-left: 15%;
+    margin-right: 10%;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+
+}
+
+div.projects {
+    margin: 3rem 0 0 0;
+    position: relative;
+}
+
+.main-info {
+    color: silver;
+}
+
+/* animation styles: */
+
+.avatar {
+    width: 40%;
+    height: auto;
+    border: solid 1px #39f9f5;
+    border-radius: 50%;
+}
+
+.cf3 {
+    position: relative;
+    margin: 5rem 0 0 0;
+}
+
+.cf3 img {
+    position: absolute;
+}
+
+.second-bottom {
+    z-index: -1;
+}
+
+@keyframes cf3FadeInOut {
+    0% {
+        opacity: 0;
+    }
+    8% {
+        opacity: 1;
+    }
+}
+
+.cf3 img.top {
+    animation-name: cf3FadeInOut;
+    animation-delay: 4s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 3s;
+}
+
+@keyframes cf3FadeIn {
+    0% {
+        z-index: 1;
+    }
+}
+
+.cf3 img.second-bottom {
+    animation-name: cf3FadeIn;
+    animation-delay: 1s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+    animation-duration: 2s;
+}
+
+/* main text styles: */
+
+h1 {
+    margin: 1rem 0;
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 5rem;
+    color: white;
+    letter-spacing: 0.1rem;
+}
+
+h2 {
+    margin: 0;
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 2rem;
+    color: rgb(6, 8, 72);
+    line-height: 2.6rem;
+}
+
+main h2{
+    font-size: 3rem;
+}
+
+p.hello {
+    display: inline-block;
+    font-family: "Orbitron", sans-serif;
+    letter-spacing: 0.15rem;
+    color: #39f9f5;
+    margin: 3rem 0 0 0;
+    font-size: 1rem;
+}
+
+p.specialize {
+    font-family: "Nunito Sans", sans-serif;
+    letter-spacing: 0.1rem;
+    color: rgb(6, 8, 72);
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin: 1rem 0 0 0;
+}
+
+.andAnd {
+    color: white;
+    font-size: 1.2rem;
+    font-style: italic;
+}
+
+/* button style */
+
+a.projects-button {
+    font-size: 0.95rem;
+    font-weight: 600;
+    font-family: "Orbitron", sans-serif;
+    text-decoration: none;
+    letter-spacing: 0.13rem;
+    background-color: white;
+    color: rgb(6, 8, 72);
+    padding: 1rem;
+    border: 2px solid rgb(6, 8, 72);
+    border-radius: 0.3rem;
+}
+
+a.projects-button:hover {
+    background-color: transparent;
+}
+
+footer {
+    background-color: transparent;
+    grid-column: 1 / span 3;
+    grid-row: 6;
+    text-align: center;
+    margin: 3rem 1rem 0 0;
+    height: 50px;
+    width: 100%;
+
+}
+footer p {
+    color: white;
+    font-size: 1.3rem;
+    font-weight: bolder;
+}
+
+@media screen and (max-width: 1250px) {
+    body {
+        display: grid;
+
+        grid-template-columns: 1fr 4fr 1fr;
+        grid-auto-rows: minmax(100px, auto);
+        height: 100vh;
+    }
+
+    section {
+        grid-column: 2 / 3;
+        grid-row: 2 / auto;
+    }
+
+    .avatar {
+        width: 20%;
+        height: auto;
+        border: solid 1px #39f9f5;
+        border-radius: 50%;
+    }
+
+    main {
+        grid-column: 2 / 3;
+        grid-row: 5 / auto;
+        text-align: left;
+        margin: 3rem 0 0 3rem;
+    }
+
+    footer {
+        grid-column: 3;
+        grid-row: 6;
+        font-size: 0.75rem;
+    }
+}
+
+/* * {
+  border: 1px solid white;
+} */
+
+@media screen and (max-width: 1000px) {
+    body {
+        grid-template-rows: minmax(100px, auto);
+        height: 100vh;
+    }
+    nav {
+        grid-column: 3;
+        text-align: end;
+        margin: 0 1.5rem 0 0;
+    }
+    nav li {
+        display: block;
+        margin: 0.5rem 0;
+    }
+    li.links {
+        float: none;
+        margin: 1rem 0;
+    }
+    section {
+        position: relative;
+        top: -35px;
+        left: 200px;
+    }
+
+    .avatar {
+        width: 30%;
+    }
+
+    main {
+        grid-column: 2 / 4;
+        grid-row: 3 / auto;
+        text-align: left;
+        margin: 3rem 4rem 0 0;
+    }
+    footer {
+        grid-row: 9;
+        margin: -5rem 0 0 0;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    body {
+        height: 100vh;
+    }
+    section {
+        left: 150px;
+    }
+    .avatar {
+        width: 35%;
+    }
+    main {
+        grid-column: 2 / 4;
+
+        grid-row: 4 / auto;
+        text-align: left;
+        margin: -2rem 4rem 0 0;
+    }
+
+    h1 {
+        margin: 1rem 0;
+        font-size: 4rem;
+    }
+
+    h2 {
+        margin: 0;
+        font-size: 2rem;
+    }
+
+    a.projects-button {
+        font-size: 0.75rem;
+        font-weight: 600;
+    }
+}
+
+@media screen and (max-width: 740px) {
+    section {
+        position: relative;
+        top: 0px;
+        left: 150px;
+    }
+    .avatar {
+        width: 40%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    section {
+        position: relative;
+        top: 15px;
+        left: 100px;
+    }
+    .avatar {
+        width: 55%;
+    }
+}
+
+@media screen and (max-width: 560px) {
+    main {
+        margin: -2rem 3rem 0 0;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    body {
+        height: 100vh;
+    }
+    main {
+        margin: -3rem 2rem 0 0;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    h1 {
+        font-size: 3rem;
+    }
+
+    .avatar {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    section {
+        top: 30px;
+        left: 80px;
+    }
+    main {
+        margin: -3rem 0.5rem 0 0;
+    }
+    .avatar {
+        width: 100%;
+        height: auto;
+    }
+    h1 {
+        font-size: 3rem;
+    }
+}
+@media screen and (max-width: 330px) {
+    section {
+        top: 50px;
+        left: 80px;
+    }
+    main {
+        margin: -5rem 0.5rem 0 0;
+    }
+    .avatar {
+        width: 120%;
+        height: auto;
+    }
+    h1 {
+        font-size: 2.5rem;
+    }
+}
+
+@media screen and (max-width: 295px) {
+    section {
+        top: 50px;
+        left: 60px;
+    }
+    main {
+        margin: -5rem 1rem 0 -0.75rem;
+    }
+    .avatar {
+        width: 420%;
+    }
+    h1 {
+        font-size: 2.3rem;
+    }
+    h2 {
+        font-size: 1.75rem;
+    }
+    a.projects-button {
+        font-size: 0.75rem;
+        font-weight: 600;
+        letter-spacing: 0.1rem;
+        padding: 0.5rem;
+    }
+}
+
+.course{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+.course img{
+    margin-left: 15px;
+}

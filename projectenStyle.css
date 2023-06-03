@@ -1,0 +1,222 @@
+html {
+  font-size: 16px;
+}
+
+body {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  grid-auto-rows: minmax(100px, auto);
+
+  background: linear-gradient(rgb(6, 8, 72), rgb(57, 249, 245));
+  margin: 0 auto;
+  font-family: "Nunito Sans", sans-serif;
+}
+
+nav li {
+  display: inline;
+  list-style: none;
+}
+
+nav a,
+footer p {
+  font-family: "Nunito Sans", sans-serif;
+  text-decoration: none;
+  color: white;
+  letter-spacing: 0.13rem;
+}
+
+nav a:hover {
+  background-color: rgb(27, 57, 121);
+}
+
+span.link-letter {
+  font-family: "Orbitron", sans-serif;
+  text-decoration: none;
+  color: #39f9f5;
+  padding-right: 0.5rem;
+}
+
+p.logo {
+  margin: 1rem 0 0 2.5rem;
+  font-size: 2.5rem;
+  color: #39f9f5;
+
+}
+
+li.links {
+  float: right;
+  margin: 1rem 2rem;
+}
+
+header {
+  grid-column: 1 / 2;
+  grid-row: 1;
+}
+
+nav {
+  grid-column: 2 / 4;
+  grid-row: 1;
+}
+
+main {
+  grid-column: 1 / 4;
+  grid-row: 2 / 7;
+}
+
+h1 {
+  font-family: "Orbitron", sans-serif;
+  color: #39f9f5;
+  margin: 2rem 0 1rem 0;
+  text-align: center;
+  letter-spacing: 0.215rem;
+}
+h4{
+  font-family: "Orbitron", sans-serif;
+  color: #39f9f5;
+  margin: 2rem 0 0rem 0;
+  text-align: center;
+  letter-spacing: 0.215rem;
+}
+h6{
+  font-family: "Orbitron", sans-serif;
+  margin: 1rem 0 6rem 0;
+  text-align: center;
+  letter-spacing: 0.215rem;
+
+}
+a{
+  text-decoration: none;
+}
+.section-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+section {
+  margin: 1.5rem 2.5rem 4.5rem 2.5rem;
+  width: 200px;
+  height: 200px;
+}
+
+.project-one,
+.project-two,
+.project-three
+{
+  background-size: cover;
+  background-repeat: no-repeat;
+  border: 2px solid #39f9f5;
+}
+
+.project-one {
+  background-image: url(images/cypress_udemy.png);
+}
+
+.project-two {
+  background-image: url(images/pygame.jpg);
+}
+
+.project-three {
+  background-image: url(images/mern_stack.png);
+}
+
+.site-link-outside {
+  color: white;
+  font-size: 1.2rem;
+  margin: 0 0 0 2.5rem;
+  letter-spacing: 0.1rem;
+  text-decoration: none;
+}
+
+.site-link-outside:hover {
+  color: #39f9f5;
+}
+
+.site-link {
+  text-decoration: none;
+  color: #39f9f5;
+  font-size: 1.5rem;
+  display: block;
+}
+
+
+footer {
+  background-color: transparent;
+  grid-column: 1 / span 3;
+  grid-row: 6;
+  text-align: center;
+  margin: 3rem 1rem 0 0;
+  height: 50px;
+  width: 100%;
+}
+
+footer p {
+  color: white;
+  font-size: 1.3rem;
+  font-weight: bolder;
+}
+
+@media screen and (max-width: 900px) {
+  nav {
+    grid-column: 3;
+    margin-left: 3rem;
+  }
+  nav li {
+    display: block;
+    margin: 0.5rem 0;
+  }
+  li.links {
+    float: none;
+    margin: 1rem 0;
+  }
+  section {
+    margin: 2rem;
+    width: 300px;
+    height: 300px;
+  }
+  h1 {
+    font-size: 1.75rem;
+  }
+
+
+
+@media screen and (max-width: 740px) {
+  h1 {
+    margin: 1rem 0 2.5rem 0;
+  }
+  section {
+    margin: 2rem;
+    width: 250px;
+    height: 250px;
+  }
+  nav {
+    margin-right: 1.5rem;
+  }
+  .site-link-outside
+  {
+    font-size: 0.95rem;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  section {
+    margin: 2rem;
+    width: 220px;
+    height: 220px;
+  }
+
+
+  @media screen and (max-width: 380px) {
+    h1 {
+      font-size: 1.25rem;
+      margin: 0 1rem 1.75rem 1rem;
+    }
+  }
+}
+}
+

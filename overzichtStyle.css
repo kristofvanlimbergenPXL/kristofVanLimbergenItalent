@@ -1,0 +1,450 @@
+html {
+  font-size: 16px;
+}
+
+body {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  grid-auto-rows: minmax(100px, auto);
+
+  background: linear-gradient(rgb(6, 8, 72), rgb(57, 249, 245));
+  margin: 0 auto;
+  font-family: "Nunito Sans", sans-serif;
+}
+
+nav li {
+  display: inline;
+  list-style: none;
+}
+
+nav a,
+footer p {
+  font-family: "Nunito Sans", sans-serif;
+  text-decoration: none;
+  color: white;
+  letter-spacing: 0.13rem;
+}
+
+nav a:hover {
+  background-color: rgb(27, 57, 121);
+}
+
+span.link-letter {
+  font-family: "Orbitron", sans-serif;
+  text-decoration: none;
+  color: #39f9f5;
+  padding-right: 0.5rem;
+}
+
+p.logo {
+  margin: 1rem 0 0 2.5rem;
+  font-size: 2.5rem;
+  color: #39f9f5;
+
+}
+
+li.links {
+  float: right;
+  margin: 1rem 2rem;
+}
+
+header {
+  grid-column: 1 / 2;
+  grid-row: 1;
+}
+
+nav {
+  grid-column: 2 / 4;
+  grid-row: 1;
+}
+
+main {
+  grid-column: 1 / 4;
+  grid-row: 2 / 7;
+}
+
+h1 {
+  font-family: "Orbitron", sans-serif;
+  color: #39f9f5;
+  margin: 2rem 0 6rem 0;
+  text-align: center;
+  letter-spacing: 0.215rem;
+}
+
+.section-container {
+  display: inline-flex;
+  flex-wrap: wrap;
+}
+
+section {
+  margin: 1.5rem 2.5rem 4.5rem 2.5rem;
+  width: 380px;
+  height: 360px;
+}
+
+.project-one,
+.project-two,
+.project-three,
+.project-four,
+.project-five,
+.project-six,
+
+.project-eight,
+.project-nine,
+.project-ten
+{
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: scroll;
+  border: 2px solid #39f9f5;
+  animation-duration: 0.75s;
+  animation-name: border-thick;
+}
+.project-seven
+{
+  background-size: contain;
+  background-repeat: no-repeat;
+  overflow: scroll;
+  border: 2px solid #39f9f5;
+  animation-duration: 0.75s;
+  animation-name: border-thick;
+}
+
+
+border-thick {
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes border-thick {
+  0% {
+    border: 12px solid #39f9f5;
+  }
+  10% {
+    border: 11px solid #39f9f5;
+  }
+  20% {
+    border: 10px solid #39f9f5;
+  }
+  30% {
+    border: 9px solid #39f9f5;
+  }
+  40% {
+    border: 8px solid #39f9f5;
+  }
+  50% {
+    border: 7px solid #39f9f5;
+  }
+  60% {
+    border: 6px solid #39f9f5;
+  }
+  70% {
+    border: 5px solid #39f9f5;
+  }
+  80% {
+    border: 4px solid #39f9f5;
+  }
+  90% {
+    border: 3px solid #39f9f5;
+  }
+  100% {
+    border: 2px solid #39f9f5;
+  }
+}
+
+.project-one {
+  background-image: url(images/safeFramework.png);
+}
+
+.project-two {
+  background-image: url(images/cypress_logo.png);
+}
+
+.project-three {
+  background-image: url(images/cypress_udemy.png);
+  /* background-image: url(images/hikingClubTwo.jpg); */
+}
+
+.project-four {
+  background-image: url(images/mern_stack.png);
+}
+
+.project-five {
+  background-image: url(images/pygame.jpg);
+}
+.project-six{
+  background-image: url(images/plan.jpg);
+}
+.project-seven{
+  background-image: url(images/TLDR_logo.png);
+}
+.project-eight{
+  background-image: url(images/medium_logo.png);
+
+}
+.project-nine{
+  background-image: url(images/dev_logo.png);
+
+}
+.project-ten{
+  background-image: url(images/pop.png);
+
+}
+.project-one h2,
+.project-one h2,
+.project-two h2,
+.project-three h2,
+.project-four h2,
+.project-five h2,
+.project-six  h2,
+.project-seven h2,
+.project-eight h2,
+.project-nine h2,
+.project-ten h2
+{
+  font-size: 1.75rem;
+  line-height: 2rem;
+}
+
+.project-one p,
+.project-two p,
+.project-three p,
+.project-four p,
+.project-five p,
+.project-six p,
+.project-seven p,
+.project-eight p,
+.project-nine p,
+.project-ten p{
+  font-size: 1rem;
+}
+
+.project-one h2,
+.project-two h2,
+.project-three h2,
+.project-four h2,
+.project-five h2,
+.project-six  h2,
+.project-seven h2,
+.project-eight h2,
+.project-nine h2,
+.project-ten h2,
+.project-one p,
+.project-two p,
+.project-three p,
+.project-four p,
+.project-five p,
+.project-six p,
+.project-seven p,
+.project-eight p,
+.project-nine p,
+.project-ten p{
+  /*padding: 1rem 1.5rem 0 1.5rem;*/
+  padding: 0 1.2rem;
+  letter-spacing: 0.1rem;
+  color: white;
+  opacity: 0;
+  transform: scale(0);
+  transition: 0.5s;
+}
+
+.project-one:hover,
+.project-two:hover,
+.project-three:hover,
+.project-four:hover,
+.project-five:hover,
+.project-six:hover,
+.project-seven:hover,
+.project-eight:hover,
+.project-nine:hover,
+.project-ten:hover{
+  /* opacity: 0.8; */
+  box-shadow: 0 0 0 200px rgba(6, 8, 72, 0.87) inset;
+  transition: 0.1s;
+}
+
+.project-one:hover p,
+.project-two:hover p,
+.project-three:hover p,
+.project-four:hover p,
+.project-five:hover p,
+.project-six:hover p,
+.project-seven:hover p,
+.project-eight:hover p,
+.project-nine:hover p,
+.project-ten:hover p
+{
+  opacity: 1;
+  transform: scale(1);
+}
+
+.project-one:hover h2,
+.project-two:hover h2,
+.project-three:hover h2,
+.project-four:hover h2,
+.project-five:hover h2,
+.project-six:hover h2,
+.project-seven:hover h2,
+.project-eight:hover h2,
+.project-nine:hover h2,
+.project-ten:hover h2{
+  opacity: 1;
+  transform: scale(1);
+}
+
+.site-link-outside {
+  color: white;
+  font-size: 1.2rem;
+  margin: 0 0 0 2.5rem;
+  letter-spacing: 0.1rem;
+}
+
+.right-align-link {
+  margin: 0;
+}
+/*.site-link-outside:hover {
+  color: #39f9f5;
+}*/
+
+.site-link {
+  text-decoration: none;
+  color: #39f9f5;
+  font-size: 1.5rem;
+  display: block;
+}
+
+.right-align {
+  text-align: right;
+}
+
+footer {
+  background-color: transparent;
+  grid-column: 1 / span 3;
+  grid-row: 6;
+  text-align: center;
+  margin: 3rem 1rem 0 0;
+  height: 50px;
+  width: 100%;
+}
+
+footer p {
+  color: white;
+  font-size: 1.3rem;
+  font-weight: bolder;
+}
+
+@media screen and (max-width: 900px) {
+  nav {
+    grid-column: 3;
+    margin-left: 3rem;
+  }
+  nav li {
+    display: block;
+    margin: 0.5rem 0;
+  }
+  li.links {
+    float: none;
+    margin: 1rem 0;
+  }
+  section {
+    margin: 2rem;
+    width: 300px;
+    height: 300px;
+  }
+  h1 {
+    font-size: 1.75rem;
+  }
+  .right-align-link {
+    display: block;
+    margin: 0.5rem 0 -1rem 0;
+  }
+  .project-one:hover h2,
+  .project-two:hover h2,
+  .project-three:hover h2,
+  .project-four:hover h2,
+  .project-five:hover h2,
+  .project-six:hover h2,
+  .project-seven:hover h2,
+  .project-eight:hover h2,
+  .project-nine:hover h2,
+  .project-ten:hover h2
+  {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+  .project-one:hover p,
+  .project-two:hover p,
+  .project-three:hover p,
+  .project-four:hover p,
+  .project-five:hover p,
+  .project-six:hover p,
+  .project-seven:hover p,
+  .project-eight:hover p,
+  .project-nine:hover p,
+  .project-ten:hover p{
+    font-size: 1rem;
+    line-height: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 740px) {
+  h1 {
+    margin: 1rem 0 2.5rem 0;
+  }
+  section {
+    margin: 2rem;
+    width: 250px;
+    height: 250px;
+  }
+  nav {
+    margin-right: 1.5rem;
+  }
+  .site-link-outside,
+  .right-align-link {
+    font-size: 0.95rem;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+  section {
+    margin: 2rem;
+    width: 220px;
+    height: 220px;
+  }
+  .project-one:hover h2,
+  .project-two:hover h2,
+  .project-three:hover h2,
+  .project-four:hover h2,
+  .project-five:hover h2,
+  .project-six:hover h2,
+  .project-seven:hover h2,
+  .project-eight:hover h2,
+  .project-nine:hover h2,
+  .project-ten:hover h2{
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+  .project-one:hover p,
+  .project-two:hover p,
+  .project-three:hover p,
+  .project-four:hover p,
+  .project-five:hover p,
+  .project-six:hover p,
+  .project-seven:hover p,
+  .project-eight:hover p,
+  .project-nine:hover p,
+  .project-ten:hover p{
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  h1 {
+    font-size: 1.25rem;
+    margin: 0 1rem 1.75rem 1rem;
+  }
+}
+

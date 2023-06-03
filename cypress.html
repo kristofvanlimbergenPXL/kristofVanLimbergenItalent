@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kristof Van Limbergen</title>
+    <link rel="icon" type="image/x-icon" href="images/kv.png">
+    <link rel="stylesheet" href="cypressStyle.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+            href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&family=Orbitron:wght@400;500;600;700;800;900&family=Source+Code+Pro:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+            rel="stylesheet">
+    <script src="https://kit.fontawesome.com/cfe95b515f.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+<header>
+    <p class="logo">ITalent 2022-2023</p>
+</header>
+
+<nav>
+    <ul>
+        <li class="links"><a href="eindreflectie.html"><span class="link-letter">>></span>Eindreflectie</a></li>
+        <li class="links">
+
+            <a href="projecten.html"><span class="link-letter">>></span>Projecten</a></li>
+
+        <li class="links"><a href="overzicht.html"><span class="link-letter">>></span>Overzicht</a></li>
+        <li class="links"><a href="index.html"><span class="link-letter">>></span>home</a></li>
+
+    </ul>
+</nav>
+
+<main class="main-info">
+    <h1>Cypress</h1>
+
+
+</main>
+<section class="section-info">
+    <h2>Verslag</h2>
+
+    <p class="specialize">
+        Naar aanleiding van een seminarie over het Cypress Testing Framework op mijn werk, werd mijn interesse gewekt om me
+        verder te verdiepen in de mogelijkheden die Cypress biedt. Om mijn kennis en vaardigheden uit te breiden, ben ik op
+        zoek gegaan naar een interessante cursus. Op het Udemy-platform vond ik een cursus die de belangrijkste concepten van
+        Cypress behandelt. In dit verslag zal ik een overzicht geven van de cursus die ik heb gevolgd, waarbij ik de
+        belangrijkste onderwerpen bespreek en toelicht. Cypress is een Javascript end-to-end testing framework voor het
+        schrijven van testen voor praktisch alles wat in een webbrowser draait. Door het schrijven van tests met Cypress
+        kunnen de functionaliteit en de performance afgetoetst worden.
+    </p>
+    <br>
+    <div class="course">
+        <img src="images/cypress_udemy1.png" alt="cypress course">
+        <img src="images/cert_Cypress.jpg" alt="Cypress certificaat">
+    </div>
+    <br>
+    <p class="specialize">
+        De cursus start met het installeren van Cypress en het opzetten van de omgeving. Cypress kan eenvoudig met NPM
+        geïnstalleerd worden door middel van volgend commando:<strong>npm install --save-dev cypress@12.6.0</strong> (In deze cursus is er
+        voor versie 12.6.0 gekozen). Bij het openen van Cypress krijg je eerst een welkomscherm te zien waar je kan kiezen
+        voor end-to-end testing of component testing. Vervolgens kan je kiezen in welke browser je Cypress wil uitvoeren om
+        tot slotte in de werkomgeving terecht te komen waar je de testen kan runnen. Later wordt hier meer in detail gegaan.
+    </p>
+    <br>
+    <div>
+        <img src="images/startscherm_cypress.png" alt="startscherm Cypress">
+        <img src="images/webbrowser_cypress.png" alt="startscherm Cypress">
+        <img src="images/werkomgeving_cypress.png" alt="startscherm Cypress">
+    </div>
+    <br>
+    <p class="specialize">
+        Voor het schrijven van tests maakt Cypress gebruik van Mocha.js en Chai.js. Mocha.js is een populair Javascript
+        framework dat een gestructureerde manier biedt om tests te organiseren en uit te voeren, en wordt typisch gekenmerkt
+        door ‘ describe en It’. Chai.js is een assertions library voor het aftoetsen of valideren van testresultaten. Typisch
+        hierbij is ‘should’.
+    </p>
+    <br>
+    <div>
+        <img src="images/chai_voorbeeld.jpg" alt="chai.js">
+        <img src="images/mocha_voorbeeld.png" alt="Mocha.js">
+    </div>
+    <br>
+    <p class="specialize">
+        Het vervolg van de cursus richt zich op het testen van verschillende componenten in de webbrowser, zoals formulieren,
+        knoppen, checkboxes etc. Cypress biedt een handige manier om deze elementen te testen door gebruik te maken van de
+        selectors van de DOM-elementen. Om een specifiek element te kunnen testen, moet je de juiste selector vinden. Dit kun
+        je doen door de inspector F12 van je webbrowser te gebruiken. Met de inspecteur kun je de HTML-structuur van de
+        webpagina bekijken en de gewenste elementen lokaliseren. Zodra je het element hebt gevonden dat je wilt testen, kun
+        je de bijbehorende selector identificeren. Een selector kan een id, een class of een ander attribuut van het element zijn. Cypress maakt gebruik van deze selectors om het element te vinden en ermee te interageren tijdens het testen. Onderstaande video is een korte eenvoudige demo. In de demo wordt er eerst naar de website gegaan waarna de knop voor naar het contactformulier geselecteerd wordt via de selector. Vervolgens wordt het formulier ingevuld en opgeslagen.
+        Door het gebruik van de juiste selectors en Cypress-commando's kun je op een gestructureerde manier verschillende
+        componenten in de webbrowser testen. Hierdoor kun je ervoor zorgen dat de functionaliteit van je applicatie correct
+        werkt.
+    </p>
+    <br>
+    <div>
+        <video width="90%" height="500" controls>
+            <source src="videos/cypress_demo.mp4" type="video/mp4">
+        </video>
+    </div>
+    <br>
+    <p class="specialize">
+        In de cursus leer je ook hoe je variabelen en klassen kunt gebruiken om je tests flexibeler en herbruikbaarder te
+        maken. Het gebruik van variabelen stelt je in staat om waarden op te slaan en te hergebruiken tijdens het testen.
+        Klassen in Cypress kunnen worden gebruikt om specifieke functionaliteiten en testscenario's te groeperen.
+    </p>
+    <br>
+    <p class="specialize">
+        In de cursus wordt er ook geleerd om Cypress met Jenkins te integreren. Jenkins is een
+        CI/CD (Continuous Integration / Continuous Deployement) tool waarmee onder andere testen automatisch gebuild kunnen
+        worden. De combinatie van Cypress en Jenkins biedt verschillende voordelen. Door Cypress-tests op te nemen in een
+        Jenkins-pipeline kunnen tests automatisch uitgevoerd worden bij elke code commit of op geplande tijdstippen.
+        Hierdoor wordt het testproces geautomatiseerd en krijgt men snel feedback over de kwaliteit van de code en
+        eventuele problemen worden vroegtijdig ontdekt. In de cursus wordt er geleerd hoe je een Jenkins pipeline kunt
+        opzetten met GitHub waar de Cypress code staat. Een ander interessante tool die ter sprake komt is
+        Cypress Dashboard Cloud. Het is een platform waar je onder andere gemakkelijk de vooruitgang van je testen
+        kan volgen, testresultaten kunt bekijken en rapporten kunt laten genereren. De integratie van Cypress met
+        Jenkins en het gebruik van Cypress Dashboard maakt het mogelijk om webapplicaties automatisch en efficiënt uit
+        te voeren.
+    </p>
+    <br>
+    <div>
+        <img src="images/cypress_dashboard1.png" alt="cypress dashboard">
+        <img src="images/cypress-jenkins1.png" alt="cypress dashboard specs">
+
+    </div>
+    <br>
+    <p class="specialize">
+        De code kan gevonden worden op
+        Github onder de map cypress_automation_framework. Onder de branch cypress_jenkins bevat de code en
+        Jenkinsfile voor de integratie met Jenkins: <a href="https://github.com/kristofvanlimbergenPXL/ITalentProjects" target="_blank">Link naar GitHub</a>.
+    </p>
+    <br>
+    <h2>Reflectie</h2>
+    <p class="specialize">
+        Het volgen van de cursus over Cypress is een leerrijke ervaring geweest. De vaardigheden die ik tijdens deze cursus
+        heb opgedaan, zal ik zeker kunnen benutten in mijn professionele werkzaamheden binnen Cipal Schaubroeck. Door dat
+        ik al enige achtergrond en kennis had in JavaScript was ik vrij snel mee met de principes in Cypress. Bovendien heeft
+        de cursus me ook nieuwe inzichten gegeven in het opzetten van een Jenkins-pipeline voor het automatiseren van testen
+        bij het commiten van nieuwe code op GitHub. Tijdens de opleiding heb ik al eens een Jenkins-pipeline opgezet, maar
+        nog niet met de integratie voor automatische tests te laten runnen. In de cursus werd stapsgewijs en duidelijk
+        uitgelegd hoe je een pipeline kunt configureren zodat testruns automatisch gebeuren wanneer er nieuwe code wordt
+        gecommit op GitHub. Ik vond het ook interessant om te leren werken met Cypress Dashboard Cloud, een platform dat
+        specifiek is ontworpen voor het uitvoeren en beheren van Cypress-tests in de cloud. Het gebruik van de
+        dashboard functionaliteit biedt de mogelijkheid om de voortgang van tests te volgen, gedetailleerde rapporten te genereren en testresultaten te analyseren.
+        Wat ik enorm waardeerde aan de cursus was de praktische benadering van het lesmateriaal om de concepten en
+        technieken direct in de praktijk te brengen. Ik ben ervan overtuigd dat de kennis en de vaardigheden die ik
+        heb opgedaan, met de cursus, sowieso een meerwaarde zijn in mijn professionele ontwikkeling.
+
+    </p>
+
+
+
+</section >
+
+
+</body>
+
+
+<footer>
+    <p>&copy; Kristof Van Limbergen 2023</p>
+</footer>
+
+</html>

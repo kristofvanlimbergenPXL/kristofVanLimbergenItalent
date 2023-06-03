@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kristof Van Limbergen</title>
+    <link rel="icon" type="image/x-icon" href="images/kv.png">
+    <link rel="stylesheet" href="pygameStyle.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+            href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&family=Orbitron:wght@400;500;600;700;800;900&family=Source+Code+Pro:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+            rel="stylesheet">
+    <script src="https://kit.fontawesome.com/cfe95b515f.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<header>
+    <p class="logo">ITalent 2022-2023</p>
+</header>
+<nav>
+    <ul>
+        <li class="links"><a href="eindreflectie.html"><span class="link-letter">>></span>Eindreflectie</a></li>
+        <li class="links">
+
+            <a href="projecten.html"><span class="link-letter">>></span>Projecten</a></li>
+
+        <li class="links"><a href="overzicht.html"><span class="link-letter">>></span>Overzicht</a></li>
+        <li class="links"><a href="index.html"><span class="link-letter">>></span>home</a></li>
+
+    </ul>
+</nav>
+
+
+<main class="main-info">
+    <h1>Pygame</h1>
+
+
+</main>
+<section class="section-info">
+    <h2>Verslag</h2>
+    
+    <p class="specialize">
+        Ik heb me al dikwijls afgevraagd hoe game development in elkaar zit. En nu mijn oudste dochter van die ‘eenvoudige‘ games speelt op de tablet werd ik getriggerd om hier een project over te doen. Ik ben dan op zoek gegaan naar een
+        cursus voor 2D games te leren maken. Uiteindelijk ben ik bij een cursus op Udemy terechtgekomen waar er met Pygame
+        2d-games gemaakt worden. Pygame is een onderdeel van Python.</p>
+    <br>
+    <div class="course">
+        <img src="images/pygame_udemy.png" alt="pygame course">
+        <img src="images/cert_pygame.jpg" alt="pygame certificaat">
+    </div>
+    <br>
+
+    <p class="specialize">In de eerste sectie van de cursus worden de basis elementen van pygame uitgelegd.
+        Elk game dat gemaakt wordt met Pygame begint steeds met dezelfde code. Je kan het als een start template zien:
+    </p>
+    <br>
+    <div class="course">
+        <img src="images/game_loop.png" alt="game loop" height="300" width="300">
+    </div>
+    <div class="course">
+        <ul>
+            <li><strong>Pygame.init()</strong>
+                <ul>
+                    <li>Pygame wordt opgestart en geinitialiseerd zoals assests die geladen worden, de game wordt gestart,…</li>
+                </ul>
+            </li>
+
+            <li><strong>screen=pygame.display.set_mode((500,500),0,32)</strong>
+                <ul>
+                    <li>Creert het gamewindow met in dit geval een hoogte en breedte van 500px. Er kunnen optionele parameters worden
+                        meegegeven voor het scherm in te stellen zoals onder andere de kleurdiepte. In ons geval is het  32 bit color.</li>
+                </ul>
+            </li>
+
+            <li><strong>pygame.display.set_caption("Hello")</strong>
+                <ul>
+                    <li>Hiermee kan je de naam van het scherm instellen</li>
+                </ul>
+            </li>
+
+            <li><strong>screen.fill((0,0,0))</strong>
+                <ul>
+                    <li>Opvullen van het scherm met een specifieke kleur in RGB. Ik heb voor een eenvoudig zwart scherm gekozen.</li>
+                </ul>
+            </li>
+            <li><strong>while not… </strong>
+                <ul>
+                    <li>Dit is de ‘main game loop’. Dit heb je bij elk game zeker nodig omdat je anders niets gaat zien op je scherm.
+                        Hier wordt eignelijk bepaald wat het spel doet Deze loop blijft continu lopen totdat  de bool game_over= true.
+                        Dit is op het moment dat de gebruiker de game quit.</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <br>
+    <p class="specialize">
+        Vervolgens wordt er uitgelegd hoe je images op het speel scherm kan tonen. De objecten die je wil tonen in je game
+        zijn dus eigenlijk gewoon images. Deze objecten kunnen we dan laten voortbewegen op het scherm. In Pygame wordt een
+        object default getoond op coördinaat (0,0). Dit is linksboven in de hoek. Het was wel een beetje wennen aan de positie
+        in het assenstelsel omdat je toch vaak een ander coördinaten stelsel gewoon bent. Pygame heeft een ingebouwde functie
+        <strong>pygame.key.get_pressed()</strong> om te controleren of bepaalde toetsen zijn ingedrukt.
+        Op basis van de status van de toetsen kan je de waarden van variabelen aanpassen zodat je de coördinaten
+        van het object kunt wijzigen. Op deze manier kan je dan een object laten bewegen op je scherm.
+        Voor een image efficiënte te loaden wordt er gebruikt gemaakt van <strong>convert_alpha</strong> functie. Dit converteert de image
+        automatisch naar het meest geschikte pixelformaat voor een efficiënte weergave. Dit heeft ook een positief effect
+        op de performance van het game. Dit wordt dan ook verde gedurende cursus zo gedaan.
+    </p>
+    <br>
+    <div class="course">
+        <img src="images/image-load.png" alt="image load" width="300" >
+    </div>
+    <br>
+    <p class="specialize">
+        Tijd voor een eerste game te maken! Het welgekende retrogame Breaking Bricks.
+        Eerst plaatsen we de nodige assets op het scherm. Voor dit spel heb je bricks, een bat en een ball nodig.
+        Het aantal bricks worden gegenereerd met een for loop afhankelijk van de schermbreedte. Het aantal rijen geven
+        we wel mee. Op deze manier worden de bricks toch op een dynamische manier gegenereerd en niet hard coded met
+        een fixed aantal.
+    </p>
+    <br>
+    <div class="course">
+        <img src="images/placing-assets.png" alt="placing assets" height="250" width="350">
+    </div>
+    <br>
+    <p class="specialize">
+        Het moeilijkste gedeelte is om alles op elkaar af te stemmen. Dus wanneer een brick wordt geraakt of wanneer
+        de bal op de batt komt. We moeten eigenlijk weten waar de ball zich bevindt in de X-positie. Zolang de balls X-positie
+        gelegen is tussen de batts X-positie is de kans zeer groot dat de ball de batt zal raken. Dit kan doorgetrokken
+        worden in de Y-positie. De impact van een ball op een brick kan ook op deze manier bepaald worden. Er is ook
+        voor gezorgd dat de snelheid telkens omhoog gaat zodat de moeilijkheid verhoogt en er meer uitdaging in zit.
+        In code ziet het er zo uit:
+    </p>
+    <div class="course">
+        <img src="images/hitting-bat.png" alt="hitting bat code">
+    </div>
+    <br>
+    <p class="specialize">
+        Het uiteindelijke resultaat is in video hieronder te zien.
+    </p>
+    <h4>Breaking Bricks</h4>
+    <div class="course">
+        <video width="90%" height="500" controls>
+            <source src="videos/breakinBricks.mp4" type="video/mp4">
+        </video>
+    </div>
+    <br>
+
+    <p class="specialize">
+        Dit was in principe nog een relatief eenvoudig game voor te programmeren. In het verloop van de cursus worden er
+        meer technieken en principes uitgelegd voor game development met Pygame. Dit wordt telkens aangeleerd door het maken
+        van andere games. Zo heb ik nog enkele andere retrogames gemaakt zoals tetris, asteroids en space Invaders.
+        Allemaal pure nostalgie. Het resultaat kan je in onderstaande video’s terugvinden. De code kan gevonden worden op
+        Github onder de map Python_PyGame: <a href="https://github.com/kristofvanlimbergenPXL/ITalentProjects" target="_blank">Link naar GitHub</a>.
+    </p>
+    <div>
+        <h4>Tetris</h4>
+        <video width="90%" height="500" controls>
+            <source src="videos/tetris.mp4" type="video/mp4">
+        </video>
+    </div>
+    <div>
+        <h4>Asteroids</h4>
+        <video width="90%" height="500" controls>
+            <source src="videos/asteroids.mp4" type="video/mp4">
+        </video>
+    </div>
+    <div>
+        <h4>Space Invader</h4>
+        <video width="90%" height="500" controls>
+            <source src="videos/spaceinvader.mp4" type="video/mp4">
+        </video>
+
+    </div>
+    <br><br>
+
+    <h2>Reflectie</h2>
+    <p class="specialize">
+        De aanzet voor het volgen van een cursus over game development is er eigenlijk gekomen door mijn oudste dochter.
+        Ook al is ze nog maar 3 jaar, is ze toch al behoorlijk behendig met de tablet en in het spelen van eenvoudige
+        kinderspelletjes. Dit wekte mijn nieuwsgierigheid naar de innerlijke werking van games en bracht mij op het idee
+        voor zelf enkele retrogames te gaan maken. Ook uit pure nostalgie. De tijd dat games nog eenvoudig waren maar op
+        een of andere manier toch een bepaald charme over zich heen hadden.
+    </p>
+    <p class="specialize">
+        Na wat opzoekwerk ben ik bij Pygame uitgekomen als programmeertaal voor mijn retrogame-avontuur.
+        Pygame is een onderdeel van Python en biedt de flexibiliteit en vrijheid om games vanaf nul op te bouwen.
+        Ik was enthousiast over de mogelijkheden die het biedt en had al snel een leuke cursus op het Udemy platform
+        gevonden voor basis game development met PyGame.
+    </p>
+    <p class="specialize">
+        Het volgen van de cursus heeft me geholpen om mijn programmeerkennis op een andere manier verder uit te breiden.
+        Door de opleiding heb ik al kennis van programmeren opgedaan, wat een solide basis vormt voor het begrijpen van de
+        concepten die tijdens de cursus werden behandeld.
+        Hoewel ik in het eerste jaar van mijn opleiding al kennis had gemaakt met Python, leek het al een
+        eeuwigheid geleden. Ik moest er toch terug wel wat inkomen om weer vertrouwd te
+        raken met de syntax van de taal, maar gelukkig kwam dit snel terug tijdens de cursus. De cursus bood een
+        gestructureerd leertraject waarin ik nieuwe concepten en technieken kon leren die specifiek gericht waren op game
+        development. Het was verrassend om te ontdekken hoe ik mijn programmeervaardigheden kon toepassen op het
+        bouwen van games.
+    </p>
+    <p class="specialize">
+        Ik vond het maken van enkele retrogames een leuke en leerrijke ervaring . Ik was verrast dat ik met mijn
+        programmeerkennis vanuit mijn opleiding, in staat was om leuke games te maken. Hoewel het om relatief eenvoudige
+        2D-games ging, gaf het me toch een goed inzicht in de basisprincipes van game development. Ik besef nu dat het maken
+        van 3D-games waarschijnlijk veel complexer is. Dit is iets wat ik in de toekomst graag wil proberen en verder wil
+        verkennen. Ik ben nieuwsgierig naar de uitdagingen en mogelijkheden die 3D-game development met zich meebrengt.
+        Ik kijk ernaar uit om mijn vaardigheden verder te ontwikkelen op dit gebied. Het was zeker en vast een geslaagd avontuur.
+    </p>
+</section >
+
+
+</body>
+
+
+<footer>
+    <p>&copy; Kristof Van Limbergen 2023</p>
+</footer>
+</html>
